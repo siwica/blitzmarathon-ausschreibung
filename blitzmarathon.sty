@@ -1,0 +1,76 @@
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{pgf}
+\usepackage{siunitx}
+\usepackage{tabularx,array}
+\usepackage{tikz}
+\usepackage{xfp}
+
+\usepackage[calc,style=ddmmyyyy,datesep=.,showseconds=false]{datetime2}
+\usepackage[osf,sc]{mathpazo}
+\usepackage[german]{babel}
+
+
+% Time and date related things
+\newcount\myct
+\newcount\datecount
+\newcommand{\dateDiff}[2]{%
+\DTMsaveddateoffsettojulianday{#1}{#2}{\myct}%
+\DTMsavejulianday{newDate}{\number\myct}%
+\DTMUsedate{newDate}
+}
+
+\DTMsavedate{tournamentDate}{2021-05-01}
+\DTMsavetime{startTime}{14:00:00}
+
+
+
+
+
+
+\newsavebox{\descbox}
+\savebox{\descbox}{\bfseries another item in the dust:}
+\SetLabelAlign{Left}{\makebox[\wd\descbox][l]{#1}}
+
+
+% TODO: Treat last element differently
+\newcommand\is[2]{\foreach \x [count=\i] in #2 {%
+    \ifnum\i=1\x\else/\x\fi%
+  }%
+}
+
+\newcommand\email[1]{\href{mailto:#1}{\texttt{#1}}}
+
+\newcommand\bankFormat[1]{\fontfamily{pag}\selectfont #1}
+
+\newcommand\enum[1]{
+  \begin{enumerate}
+    \foreach \x in #1
+            {\item \x}
+  \end{enumerate}
+}
+
+\newcommand\lichessNameLink[1]{\href{https://lichess.org/@/#1}{\texttt{#1}}}
+
+\newcommand\tournamentHeader[4]{
+\begin{minipage}[t]{0.33\linewidth}\vspace{-7.7ex}
+  \includegraphics[width=3.5cm]{#1}\vspace{1em}
+  \includegraphics[width=3.5cm]{#2}
+\end{minipage}
+\begin{minipage}[t]{0.60\linewidth}
+  \vspace{5.5ex}
+
+  \begin{centering}
+    \huge \textbf{#3} \\ [14pt]
+    \large am Samstag, \DTMUsedate{#4}, 14:00 - 22:00 Uhr  \\
+  \end{centering}
+\end{minipage}
+\vspace{2em}}
+
+
+% Calculation
+\NewDocumentCommand{\showcalculation}{o m}{$
+  \IfValueTF{#1}
+    {#1}{#2} = \fpeval{#2}
+  $}

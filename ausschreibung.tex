@@ -1,0 +1,152 @@
+\documentclass[paper=a4, fontsize=10pt]{scrartcl}
+
+\usepackage{geometry} \geometry{a4paper, top=20mm, left=35mm,
+  right=25mm, bottom=15mm, headsep=20mm, footskip=0mm}
+
+\usepackage{blitzmarathon}
+\usepackage{parameters}
+
+
+\begin{document}
+
+
+\tournamentHeader{img/logo_sparkasse}
+                 {img/logo_sk_ettlingen}
+                 {\tournamentName}
+                 {tournamentDate}
+
+
+\begin{description}[leftmargin=\dimexpr\wd\descbox+\labelsep,align=Left]
+
+\item[Veranstalter:]
+  \organizerName{} mit freundlicher Unterstützung der \sponsorName{}
+
+\item[Spielort:]
+
+  Online auf \url{\lichessMainPageURL} (Account erstellbar unter
+  \url{\lichessSignupURL})
+
+\item[Spielberechtigt:]
+
+  Mitglieder (aktiv/passiv) in einem dem DSB über ihre Landesverbände
+  angeschlossenen Verein sowie europäische Spieler mit FIDE-ID.
+
+\item[Zeitplan am \DTMUsedate{tournamentDate}:]
+
+  Alle Spieler müssen sich voranmeldet am Turniertag pünktlich bis
+  13:45 Uhr in der Lichess Turniergruppe
+  ``\tournamentName'' (\url{\lichessTournamentTeamURL},
+  Freischaltung notwendig) einfinden.
+
+\item[Modus:]
+
+  Voraussichtlich ca. \expectedTotalGames{} Partien. Zunächst wird
+  eine gemeinsame Vorrunde, anschließend die Finalrunde, getrennt in
+  A- und B-Gruppe, gespielt. Der Modus wird ggf.\ entsprechend der
+  Teilnehmerzahl angepasst.
+
+\item[Bedenkzeit:]
+
+  \timePerGame{} pro Partie (\pauseBetweenGames{} Pause zwischen den
+  Partien)
+
+\item[Fair Play:]
+
+  Es gelten die \href{\lichessTermsOfServiceURL}{Lichess Fair Play and
+    Community Guidelines}. Insbesondere ist es auch nicht erlaubt,
+  sich beim Spielen abzuwechseln oder im Team zu spielen. Bei
+  Verstößen liegt die endgültige Entscheidung (über
+  Disqualifizierungen) beim Veranstalter.
+
+\item[Schiedsrichter:]
+
+  \arbiter{}
+
+\item[Preise:]
+
+  \begin{tabular}{ll}
+    Hauptpreise:       &  \is{/}{\prizesTournamentA} Euro \\
+    B-Gruppe:          &  \is{/}{\prizesTournamentB} Euro \\
+    Sonderpreise:      &  \is{/}{\specialPrizesCateries} je \specialPrizes{} Euro \\
+    Ratingpreise:      &  DWZ \is{/}{\ratingPriceCategories} je \ratingPrices{} Euro \\
+    bester Streamer:   &  \specialPrizes{} Euro
+  \end{tabular}
+
+  Die ersten beiden Preise sind garantiert, die Gesamtausschüttung
+  aller Preise ab \prizesGuaranteedMinParaticipants{} zahlenden
+  Teilnehmern.
+
+  Sonder-, Rating- und Jugendpreise erst ab
+  \specialPrizesGuaranteedMinParaticipants{} zahlenden Teilnehmern der
+  jeweiligen Kategorie. Doppelpreise sind ausgeschlossen.
+
+  Die Auszahlung der Preise erfolgt ausschließlich per
+  SEPA-Überweisung innerhalb von 2 Wochen nach Turnierende.
+
+\item[Anmeldung Startgeld:]
+
+  Anmeldung auf \url{\tournamentURL} per Webformular oder per Email an
+  \\ \email{\tournamentEmail}.
+
+  Das Startgeld beträgt:
+
+  \begin{tabular}{lr}
+  für die ersten 20 Meldungen: 6 Euro \\
+  bei Startgeldeingang bis \dateDiff{tournamentDate}{-14}: 8 Euro \\
+  bei Anmeldung und Bezahlung bis 10:00 Uhr am Spieltag (\dateDiff{tournamentDate}{0}): 10 Euro \\
+  danach: 12 Euro \\
+  Jugendliche U18 erhalten 2 Euro Rabatt.
+  \end{tabular}
+
+  Zahlung entweder per Banküberweisung an:
+
+  \begin{tabular}{ll}
+    IBAN: & \bankFormat{\IBAN} \\
+    BIC:  & \bankFormat{\BIC} \\
+          & \bankFormat{\bank}
+  \end{tabular}
+
+  oder per PayPal an \texttt{\paypalEmail}. Bei Anmeldung nach dem
+  \dateDiff{tournamentDate}{-3} ist das Startgeld ausschließlich per
+  PayPal zu zahlen.
+
+\item[Streaming:]
+
+  Links auf Turnierberichte oder Livestreams werden von uns gerne auf
+  der Homepage veröffentlicht bzw. eingebunden.
+
+\item[weitere Hinweise:]
+
+  Für die Gesamtwertung zählen die erzielten Punkte aus der Vorrunde
+  einfach und aus der Endrunde doppelt.  Bei Punktgleichheit in der
+  Gesamtwertung entscheidet:
+
+  \enum{\tiebreak}
+
+  Wichtige Hinweise der Turnierleitung sind auf der
+  \href{\tournamentURL}{\texttt{Homepage}} einzusehen
+  (Gruppeneinteilung). Die Ergebnisse werden mit Klarnamen auf der
+  \href{\tournamentURL}{\texttt{Homepage}} live veröffentlicht.
+
+  Die Turnierleitung behält sich Änderungen in Turnierangelegenheiten
+  vor.
+
+\item[Ansprechpartner, Turnierleitung und Infos:]
+
+  Simon Fromme und Lennard Löwe erreichbar per Email unter
+  \\ \email{\tournamentEmail} oder über den Lichess-Chat an
+  \lichessNameLink{sifro}, \lichessNameLink{Ralinga} und
+  \lichessNameLink{Thomas\_Batton}
+
+  Weitere Informationen und Anmeldung auf der Turnier-Homepage.
+
+  Nach der Vorrunde erfolgt die Gruppeneinteilung in A- und B-Finale
+  und wird auf der Homepage bekannt gegeben. Für das A-Finale wird an
+  die qualifizierten Teilnehmer ein Kennwort zur Teilnahme im
+  Lichess-Turnier des A-Finale verschickt. Eine Weitergabe des
+  Passworts an andere Spieler ist nicht gestattet. Alle Teilnehmer
+  müssen sich 15 min vor Start in den jeweiligen Endrundengruppen
+  einfinden.
+\end{description}
+
+\end{document}
