@@ -6,10 +6,17 @@
 \usepackage{tabularx,array}
 \usepackage{tikz}
 \usepackage{xfp}
-
+\usepackage{mdwlist}
 \usepackage[calc,style=ddmmyyyy,datesep=.,showseconds=false]{datetime2}
 \usepackage[osf,sc]{mathpazo}
 \usepackage[german]{babel}
+
+
+% Page layout
+\pagenumbering{gobble}
+
+\usepackage{geometry} \geometry{a4paper, top=30mm, left=30mm,
+  right=30mm, bottom=25mm, headsep=20mm, footskip=0mm}
 
 
 % Time and date related things
@@ -21,12 +28,8 @@
 \DTMUsedate{newDate}
 }
 
-\DTMsavedate{tournamentDate}{2021-05-01}
+\DTMsavedate{tournamentDate}{2021-05-22}
 \DTMsavetime{startTime}{14:00:00}
-
-
-
-
 
 
 \newsavebox{\descbox}
@@ -36,6 +39,15 @@
 
 % TODO: Treat last element differently
 \newcommand\is[2]{\foreach \x [count=\i] in #2 {%
+    \ifnum\i=1
+    \x
+    \else
+    /\x
+    \fi
+  }%
+}
+
+\newcommand\bis[2]{\foreach \x [count=\i] in #2 {%
     \ifnum\i=1\x\else/\x\fi%
   }%
 }
@@ -66,7 +78,7 @@
     \large am Samstag, \DTMUsedate{#4}, 14:00 - 22:00 Uhr  \\
   \end{centering}
 \end{minipage}
-\vspace{2em}}
+\vspace{3em}}
 
 
 % Calculation
