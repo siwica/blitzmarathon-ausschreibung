@@ -22,15 +22,33 @@
 
 \item[Spielplattform:]
 
-  Online auf \url{\lichessMainPageURL} (Account erstellbar unter
-  \url{\lichessSignupURL}).
+  Online auf \url{\lichessMainPageURL}. \\
+  Account erstellbar unter: \url{\lichessSignupURL}
 
   Live-Ergebnisse auf \url{\tournamentLiveURL}.
 
 \item[Spielberechtigt:]
 
-  Mitglieder (aktiv/passiv) in einem dem DSB über ihre Landesverbände
-  angeschlossenen Verein sowie europäische Spieler mit FIDE-ID.
+  Europäische Spieler mit FIDE-ID sowie Mitglieder in einem dem DSB
+  über ihre Landesverbände angeschlossenen Verein.
+
+\item[Modus:]
+
+  Voraussichtlich ca. \expectedTotalGames{} Partien. Zunächst wird
+  eine gemeinsame Vorrunde, anschließend die Finalrunde, getrennt in
+  A- und B-Gruppe, gespielt. Punkte aus der Vorrunde werden zu 50\% in
+  die Finalrunde mitgenommen. Der Modus wird ggf.\ entsprechend der
+  Teilnehmerzahl angepasst.
+
+\item[Bedenkzeit:]
+
+  \timePerGame{} pro Partie (\pauseBetweenGames{} Pause zwischen den
+  Partien)
+
+\item[Anmeldung:]
+
+  Auf \url{\tournamentURL} per Webformular oder per Email an
+  \email{\tournamentEmail}.
 
 \item[Preise:]
 
@@ -45,28 +63,14 @@
   Die ersten beiden Preise sind garantiert, die Gesamtausschüttung
   aller Preise ab \prizesGuaranteedMinParaticipants{} zahlenden
   Teilnehmern.
-
-  Sonder-, Rating- und Jugendpreise erst ab
-  \specialPrizesGuaranteedMinParaticipants{} zahlenden Teilnehmern der
-  jeweiligen Kategorie. Doppelpreise sind ausgeschlossen.
-
-  Die Auszahlung der Preise erfolgt ausschließlich per
-  SEPA-Überweisung innerhalb von 2 Wochen nach
-  Turnierende. Preisträger müssen nach dem Turnier den Organisatoren
-  Ihre IBAN mitteilen, um die Auszahlung zu ermöglichen
   
-\item[Anmeldung Startgeld:]
+\item[Startgeld:]  
 
-  Anmeldung auf \url{\tournamentURL} per Webformular oder per Email an
-  \\ \email{\tournamentEmail}.
-
-  Das Startgeld beträgt:
-
-  \hspace{2em}\begin{tabular}{ll}
-  für die ersten 20 Meldungen:                              & 6 Euro \\
-  bei Startgeldeingang bis \dateDiff{tournamentDate}{-14}:  & 8 Euro \\
-  bei Anmeldung und Bezahlung bis 10:00 Uhr am Spieltag:    & 10 Euro \\
-  danach:                                                   & 12 Euro \\
+  \hspace{2em}\begin{tabular}[t]{ll}
+  Für die ersten 20 Meldungen:                              & 6 Euro \\
+  Bei Startgeldeingang bis \dateDiff{tournamentDate}{-7}:   & 8 Euro \\
+  Bei Anmeldung und Bezahlung bis 10:00 Uhr am Spieltag:    & 10 Euro \\
+  Danach:                                                   & 12 Euro \\
   Jugendliche U18 erhalten 2 Euro Rabatt.
   \end{tabular}
 
@@ -78,15 +82,17 @@
           & \bankFormat{\bank}
   \end{tabular}
 
-  oder per PayPal an \texttt{\paypalEmail}. Bei Anmeldung nach dem
-  \dateDiff{tournamentDate}{-3} ist das Startgeld ausschließlich per
-  PayPal zu zahlen.
+  oder per PayPal an \texttt{\paypalEmail}.
+
+  Bei Anmeldung nach dem \dateDiff{tournamentDate}{-3}ist das
+  Startgeld ausschließlich per PayPal zu zahlen.
   
 \item[Zeitplan am \DTMUsedate{tournamentDate}:]
   \hspace{2em}\begin{tabular}[t]{ll}
     bis 13:45 Uhr   &  Eintreffen im Turnierraum \\
     14:00           &  Start Vorrunde \\
     ca. 17:30       &  Pause \\
+    bis 18:15 Uhr   &  Eintreffen im Turnierraum der Finalrunden \\
     18:30           &  Start Finalrunde \\
     ca. 22:00       &  Ende Turnier
   \end{tabular}
@@ -101,18 +107,6 @@
   die qualifizierten Teilnehmer ein Kennwort zur Teilnahme im
   Lichess-Turnier des A-Finale verschickt. Alle Teilnehmer müssen sich
   15 min vor Start in den jeweiligen Endrundengruppen einfinden.
-
-\item[Modus:]
-
-  Voraussichtlich ca. \expectedTotalGames{} Partien. Zunächst wird
-  eine gemeinsame Vorrunde, anschließend die Finalrunde, getrennt in
-  A- und B-Gruppe, gespielt. Der Modus wird ggf.\ entsprechend der
-  Teilnehmerzahl angepasst.
-
-\item[Bedenkzeit:]
-
-  \timePerGame{} pro Partie (\pauseBetweenGames{} Pause zwischen den
-  Partien)
 
 \item[Fair Play:]
 
@@ -135,11 +129,20 @@
 \item[weitere Hinweise:]
 
   Für die Gesamtwertung zählen die erzielten Punkte aus der Vorrunde
-  einfach und aus der Endrunde doppelt.  Bei Punktgleichheit in der
-  Gesamtwertung entscheidet:
+  einfach und aus der Endrunde doppelt.  Bei Punktgleichheit in den
+  Vorrunden/ der Gesamtwertung entscheidet:
 
   \enum{\tiebreak}
 
+  Sonder-, Rating- und Jugendpreise erst ab
+  \specialPrizesGuaranteedMinParaticipants{} zahlenden Teilnehmern der
+  jeweiligen Kategorie. Doppelpreise sind ausgeschlossen.
+
+  Die Auszahlung der Preise erfolgt ausschließlich per
+  SEPA-Überweisung innerhalb von 2 Wochen nach
+  Turnierende. Preisträger müssen nach dem Turnier den Organisatoren
+  Ihre IBAN mitteilen, um die Auszahlung zu ermöglichen
+  
   Wichtige Hinweise der Turnierleitung sind auf der
   \href{\tournamentURL}{\texttt{Homepage}} einzusehen
   (Gruppeneinteilung). Die Ergebnisse werden mit Klarnamen auf der
