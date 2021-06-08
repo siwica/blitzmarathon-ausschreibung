@@ -1,3 +1,5 @@
+% TODO: Ausschreibung als HTML auf Homepage
+
 \documentclass[paper=a4, fontsize=10pt]{scrartcl}
 
 
@@ -15,7 +17,7 @@
 
 
 \begin{basedescript}{\desclabelstyle{\multilinelabel}\desclabelwidth{10em}}
-                 
+
 
 \item[Veranstalter:]
   \organizerName{} mit freundlicher Unterstützung der \sponsorName{}
@@ -56,43 +58,38 @@
     Hauptpreise:       &  \is{/}{\prizesTournamentA} Euro \\
     B-Gruppe:          &  \is{/}{\prizesTournamentB} Euro \\
     Sonderpreise:      &  \is{/}{\specialPrizesCateries} je \specialPrizes{} Euro \\
-    Ratingpreise:      &  DWZ \is{/}{\ratingPriceCategories} je \ratingPrices{} Euro \\
-    bester Streamer:   &  \specialPrizes{} Euro
+    Jugendpreis (U18)  &  \is{/}{\youthPrizes} Euro \\
+    Ratingpreise:      &  DWZ \is{/}{\ratingPriceCategories} je \ratingPrices{} Euro
   \end{tabular}
-  
-\item[Startgeld:]  
 
-  Das Startgeld beträgt:
-  
+  Die jeweils ersten Preise im A- und B-Open sind garantiert, die
+  Gesamtausschüttung aller Preise ab
+  \prizesGuaranteedMinParaticipants{} zahlenden Teilnehmern.
+
+  Vollständige Ausschüttung der Sonder-, Rating- und Jugendpreise erst
+  ab \specialPrizesGuaranteedMinParaticipants{} zahlenden Teilnehmern
+  der jeweiligen Kategorie. Doppelpreise sind ausgeschlossen.
+
+\item[Startgeld:]
+
+  Das Startgeld beträgt (maßgeblich ist der Zahlungseingang):
+
   \hspace{2em}\begin{tabular}[t]{ll}
-  für die ersten 20 Meldungen:                              & 6 Euro \\
-  bei Startgeldeingang bis \dateDiff{tournamentDate}{-7}:   & 8 Euro \\
-  bei Anmeldung und Bezahlung bis 10:00 Uhr am Spieltag:    & 10 Euro \\
-  danach:                                                   & 12 Euro \\
+  für die ersten 20 Meldungen:                             &  6 Euro \\
+  bis \dateDiff{tournamentDate}{-7}:  &  7 Euro \\
+  bis 10:00 Uhr am Spieltag:   &  8 Euro \\
+  danach:                                                  &  10 Euro \\
   Jugendliche U18 erhalten 2 Euro Rabatt.
   \end{tabular}
 
-  Zahlung entweder per Banküberweisung an
-
-  \hspace{2em}\begin{tabular}[t]{ll}
-    IBAN: & \bankFormat{\IBAN} \\
-    BIC:  & \bankFormat{\BIC} \\
-          & \bankFormat{\bank}
-  \end{tabular}
-
-  oder per PayPal an \texttt{\paypalEmail}.
-
-  Bei Anmeldung nach dem \dateDiff{tournamentDate}{-3}ist das
-  Startgeld ausschließlich per PayPal zu zahlen.
-  
 \item[Zeitplan am \DTMUsedate{tournamentDate}:]
   \hspace{2em}\begin{tabular}[t]{ll}
     bis 13:45 Uhr   &  Eintreffen im Turnierraum \\
-    14:00           &  Start Vorrunde \\
-    ca. 17:30       &  Pause \\
-    bis 18:15 Uhr   &  Eintreffen im Turnierraum der Finalrunden \\
-    18:30           &  Start Finalrunde \\
-    ca. 22:00       &  Ende Turnier
+    14:00 Uhr       &  Start Vorrunde (ca. 21 Runden) \\
+    ca. 18:00 Uhr   &  Pause \\
+    bis 18:45 Uhr   &  Eintreffen im Turnierraum der Finalrunden \\
+    19:00 Uhr       &  Start Finalrunde (ca. 15 Runden) \\
+    ca. 22:00 Uhr   &  Ende Turnier
   \end{tabular}
 
   Alle Spieler müssen sich am Turniertag pünktlich bis 13:45 Uhr in
@@ -105,6 +102,20 @@
   die qualifizierten Teilnehmer ein Kennwort zur Teilnahme im
   Lichess-Turnier des A-Finale verschickt. Alle Teilnehmer müssen sich
   15 min vor Start in den jeweiligen Endrundengruppen einfinden.
+
+\item[Bezahlung:]
+  Zahlung entweder per Banküberweisung an
+
+  \hspace{2em}\begin{tabular}[t]{ll}
+    IBAN: & \bankFormat{\IBAN} \\
+    BIC:  & \bankFormat{\BIC} \\
+          & \bankFormat{\bank}
+  \end{tabular}
+
+  oder per PayPal an \texttt{\paypalEmail}.
+
+  Bei Anmeldung nach dem \dateDiff{tournamentDate}{-3}ist das
+  Startgeld ausschließlich per PayPal zu zahlen.
 
 \item[Fair Play:]
 
@@ -131,19 +142,11 @@
 
   \enum{\tiebreak}
 
-  Die ersten beiden Preise sind garantiert, die Gesamtausschüttung
-  aller Preise ab \prizesGuaranteedMinParaticipants{} zahlenden
-  Teilnehmern.
-
-  Sonder-, Rating- und Jugendpreise erst ab
-  \specialPrizesGuaranteedMinParaticipants{} zahlenden Teilnehmern der
-  jeweiligen Kategorie. Doppelpreise sind ausgeschlossen.
-
   Die Auszahlung der Preise erfolgt ausschließlich per
   SEPA-Überweisung innerhalb von 2 Wochen nach
   Turnierende. Preisträger müssen nach dem Turnier den Organisatoren
   ihre IBAN mitteilen, um die Auszahlung zu ermöglichen.
-  
+
   Wichtige Hinweise der Turnierleitung sind auf der
   \href{\tournamentURL}{\texttt{Homepage}} einzusehen
   (Gruppeneinteilung). Die Ergebnisse werden mit Klarnamen auf der
